@@ -1,8 +1,10 @@
 import { Layout } from "antd";
 
 import React from "react";
-import Cards from '../Cards'
+import Cards from '../Cards/Cards'
+
 import "../Layout/StockLayout.css";
+import '../Cards/Cards.css'
 
 const { Header, Footer, Sider, Content } = Layout;
 function StockLayout() {
@@ -11,10 +13,8 @@ function StockLayout() {
       <Layout>
         <Header className="layoutHeader">Header</Header>
         <Layout>
-          <div className="slider">
-            <Sider><Cards/></Sider>
-          </div>
-          <Content className="site-layout-content">Content</Content>
+            <Sider width={400} className="slider"><div className="card-container"><Cards/></div></Sider>
+          <Content className="site-layout-content"></Content>
         </Layout>
       </Layout>
     </>
