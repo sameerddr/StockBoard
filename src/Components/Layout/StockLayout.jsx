@@ -11,9 +11,7 @@ function StockLayout() {
       <Layout>
         <Header className="layoutHeader">Header</Header>
         <Layout>
-          <div className="slider">
-            <Sider><Cards/></Sider>
-          </div>
+            <Sider width={400} className="slider"><Cards/></Sider>
           <Content className="site-layout-content">Content</Content>
         </Layout>
       </Layout>
