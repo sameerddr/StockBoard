@@ -4,12 +4,15 @@
 }
 
 #ant-layout-sider {
-    background-color: rgb(197, 197, 30);
-    min-width: 400px !important;
+    background-color: black;
 }
 
 .site-layout-content {
     height: 88vh;
     padding: 24px;
     background: rgb(159, 74, 74);
+}
+
+.slider {
+    min-width: 400px;
 }
