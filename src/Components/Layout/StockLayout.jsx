@@ -11,11 +11,7 @@ function StockLayout() {
         <Header className="layoutHeader">Header</Header>
         <Layout>
           <div className="slider">
-            <Sider
-              style={{
-                Width: "70%",
-              }}
-              id="ant-layout-sider"></Sider>
+            <Sider></Sider>
           </div>
           <Content className="site-layout-content">Content</Content>
         </Layout>
