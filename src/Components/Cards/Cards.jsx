@@ -4,7 +4,8 @@ import React from 'react';
 import './Cards.css'
 const Cards = () => {
     return (
-        <div className='card-container'>
+        // <div className='card-container'>
+        <>
             <Card
                 title="TSLA"
                 headStyle={{ color: "white" }}
@@ -27,7 +28,8 @@ const Cards = () => {
             >
                 <h3 style={{ color: "white", textAlign: "left" }}>price:<span style={{ color: "green", paddingLeft:"10px" }}> $64.32</span></h3>
             </Card>
-        </div>
+        {/* </div> */}
+        </>
     )
 }
 export default Cards
