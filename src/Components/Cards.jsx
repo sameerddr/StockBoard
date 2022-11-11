@@ -1,6 +1,7 @@
 import { Card, Collapse } from 'antd';
-import './Cards.css'
+
 import React from 'react';
+import './Cards.css'
 const Cards = () => {
     return (
         <div className='card-container'>
