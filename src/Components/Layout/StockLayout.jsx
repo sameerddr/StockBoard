@@ -1,8 +1,8 @@
-import { Layout } from "antd";
 import React from "react";
+import { Layout } from "antd";
 import "../Layout/StockLayout.css";
-const { Header, Footer, Sider, Content } = Layout;
 
+const { Header, Footer, Sider, Content } = Layout;
 function StockLayout() {
   return (
     <>
