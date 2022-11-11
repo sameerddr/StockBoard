@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 
 import React from "react";
-import Cards from '../Cards'
+import Cards from '../Cards/Cards'
 import "../Layout/StockLayout.css";
 
 const { Header, Footer, Sider, Content } = Layout;
