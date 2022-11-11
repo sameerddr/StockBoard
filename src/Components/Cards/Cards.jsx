@@ -1,7 +1,7 @@
 import { Card, Collapse } from 'antd';
-
 import React from 'react';
 import './Cards.css'
+
 const Cards = () => {
     return (
         // <div className='card-container'>
@@ -26,7 +26,7 @@ const Cards = () => {
                 extra={<img src='https://pbs.twimg.com/profile_images/1145524454170062848/U4lxVYEw_400x400.png'
                     style={{ height: "50px", width: "50px", borderRadius: '50%' }} />}
             >
-                <h3 style={{ color: "white", textAlign: "left" }}>price:<span style={{ color: "green", paddingLeft:"10px" }}> $64.32</span></h3>
+                <h3 >price:<span style={{ color: "green", paddingLeft:"10px" }}> $64.32</span></h3>
             </Card>
         {/* </div> */}
         </>
