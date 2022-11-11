@@ -12,3 +12,7 @@ h3{
     align-items: center;
     justify-content: space-evenly;
   }
+  span{
+    color: rgb(0, 237, 28);
+    padding-left: 10px;
+  }
