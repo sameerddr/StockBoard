@@ -1,0 +1,15 @@
+.layoutHeader {
+    background-color: aqua;
+    height: 12vh;
+}
+
+.site-layout-content {
+    height: 88vh;
+    padding: 24px;
+    background: rgb(159, 74, 74);
+}
+
+.slider {
+    min-width: 400px;
+    background-color: black;
+}

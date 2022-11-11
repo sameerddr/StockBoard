@@ -1,6 +1,6 @@
 import "antd/dist/antd.css";
+import StockLayout from "./Components/Layout/StockLayout";
 import "./App.css";
-import StockLayout from "./Components/StockLayout";
 function App() {
   return (
     <div className="App">
