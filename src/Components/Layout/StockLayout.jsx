@@ -5,6 +5,7 @@ import Cards from '../Cards/Cards'
 
 import "../Layout/StockLayout.css";
 import '../Cards/Cards.css'
+import { TableComponent } from "../table/TableComponent";
 
 const { Header, Footer, Sider, Content } = Layout;
 function StockLayout() {
@@ -14,7 +15,9 @@ function StockLayout() {
         <Header className="layoutHeader">Header</Header>
         <Layout>
             <Sider width={400} className="slider"><div className="card-container"><Cards/></div></Sider>
-          <Content className="site-layout-content"></Content>
+          <Content className="site-layout-content">
+          <TableComponent/>
+          </Content>
         </Layout>
       </Layout>
     </>
