@@ -7,7 +7,7 @@ const Cards = () => {
         <>
             <div className='card'>
                 <div className='stockdata'>
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8q0metut-4bQutjD3LQhql0bfSaXE_4ETJQ&usqp=CAU' style={{ height: "30px", width: "30px", borderRadius: '50%' }} />
+                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8q0metut-4bQutjD3LQhql0bfSaXE_4ETJQ&usqp=CAU' className='logo' />
                     <h1 className='heading'>TSLA</h1>
                     <p className='percent'>0.25%</p>
                 </div>
