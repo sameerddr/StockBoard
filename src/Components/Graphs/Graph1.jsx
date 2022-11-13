@@ -30,7 +30,6 @@ function Graph1() {
       }
       i++;
     }
-    console.log(a);
     setdata(a);
   };
 

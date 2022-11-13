@@ -12,7 +12,7 @@ const DemoLine = () => {
       "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=SHOP.TRT&outputsize=full&apikey=W9IPCZT6X76UJZOY";
 
     const response = await axios.get(api);
-    console.log(response);
+    // console.log(response);
     let i = 0;
     let a = [];
     let data = response.data["Time Series (Daily)"];
@@ -31,7 +31,6 @@ const DemoLine = () => {
       }
       i++;
     }
-    console.log(a);
     setdata(a);
   };
 
