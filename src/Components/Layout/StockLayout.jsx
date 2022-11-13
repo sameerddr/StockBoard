@@ -13,7 +13,7 @@ function StockLayout() {
       <Layout>
         <Header className="layoutHeader">Header</Header>
         <Layout>
-            <Sider width={400} className="slider"><div className="card-container"><Cards/></div></Sider>
+            <Sider width={380} className="slider"><div className="card-container"><Cards/></div></Sider>
           <Content className="site-layout-content"></Content>
         </Layout>
       </Layout>
