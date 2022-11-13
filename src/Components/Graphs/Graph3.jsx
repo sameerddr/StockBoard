@@ -8,19 +8,17 @@ const DemoArea = () => {
   const [data, setdata] = useState([]);
 
   const GetApi = async () => {
-    const response = await axios.get(
-      "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=RELIANCE.BSE&outputsize=full&apikey=W9IPCZT6X76UJZOY"
-    );
+    let api =
+      "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=RELIANCE.BSE&outputsize=full&apikey=W9IPCZT6X76UJZOY";
+
+    const response = await axios.get(api);
     console.log(response);
-    // console.log(response.data["Time Series (Daily)"]["1999-11-01"]["1. open"]);
-    // console.log(response.data["Time Series (Daily)"]["1999-11-01"]);
     let i = 0;
     let a = [];
     let data = response.data["Time Series (Daily)"];
     while (i < Object.keys(data).length) {
       if (i % 400 == 0) {
         a.push({
-          // high: data[Object.keys(data)[i]]["2. high"],
           value: data[Object.keys(data)[i]]["3. low"],
           type: "low",
           date: Object.keys(data)[i],
@@ -36,9 +34,11 @@ const DemoArea = () => {
     console.log(a);
     setdata(a);
   };
+
   useEffect(() => {
     GetApi();
   }, []);
+
   const config = {
     data,
     xField: "date",
@@ -62,5 +62,3 @@ const DemoArea = () => {
 };
 
 export default DemoArea;
-
-// https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=RELIANCE.BSE&outputsize=full&apikey=W9IPCZT6X76UJZOY

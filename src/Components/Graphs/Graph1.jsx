@@ -8,19 +8,16 @@ function Graph1() {
   const [data, setdata] = useState([]);
 
   const GetApi = async () => {
-    const response = await axios.get(
-      "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=IBM&outputsize=full&apikey=W9IPCZT6X76UJZOY"
-    );
-    // console.log(response);
-    // console.log(response.data["Time Series (Daily)"]["1999-11-01"]["1. open"]);
-    // console.log(response.data["Time Series (Daily)"]["1999-11-01"]);
+    let api =
+      "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=IBM&outputsize=full&apikey=W9IPCZT6X76UJZOY";
+
+    const response = await axios.get(api);
     let i = 0;
     let a = [];
     let data = response.data["Time Series (Daily)"];
     while (i < Object.keys(data).length) {
       if (i % 500 == 0) {
         a.push({
-          // high: data[Object.keys(data)[i]]["2. high"],
           value: data[Object.keys(data)[i]]["3. low"],
           type: "low",
           date: Object.keys(data)[i],
@@ -36,9 +33,11 @@ function Graph1() {
     console.log(a);
     setdata(a);
   };
+
   useEffect(() => {
     GetApi();
   }, []);
+
   const config = {
     data,
     isStack: true,
