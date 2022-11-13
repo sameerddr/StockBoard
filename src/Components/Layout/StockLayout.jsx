@@ -2,10 +2,10 @@ import { Layout } from "antd";
 
 import React from "react";
 import Cards from '../Cards/Cards'
+import { TableComponent } from "../table/TableComponent";
 
 import "../Layout/StockLayout.css";
 import '../Cards/Cards.css'
-import { TableComponent } from "../table/TableComponent";
 
 const { Header, Footer, Sider, Content } = Layout;
 function StockLayout() {
