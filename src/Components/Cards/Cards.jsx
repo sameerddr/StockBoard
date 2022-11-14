@@ -11,7 +11,7 @@ const Cards = (props) => {
                 <div className='stockdata'>
                     <img src={props.image} className='logo' />
                     <h1 className='heading'>{props.name}</h1>
-                    <p className='percent'>{props.change}</p>
+                    <p className='percent'>{props.change}%</p>
                 </div>
                 <div className='flex'>
                     <div className='flex-column'>
