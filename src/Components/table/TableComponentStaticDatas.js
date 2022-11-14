@@ -12,9 +12,9 @@ const column = [
         dataIndex:'unit'
     },
     {
-        title:'Value',
+        title:'$ Price',
         dataIndex:'value'
     }
 ]
 
-export default column
+export default column;

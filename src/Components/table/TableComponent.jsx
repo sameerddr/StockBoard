@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import  column  from './TableComponentStaticDatas';
 
 import 'react-toastify/dist/ReactToastify.css';
+import './Table.css';
 
 export function TableComponent() {
   const [url, setUrl] = useState(
@@ -41,6 +42,7 @@ export function TableComponent() {
   return (
     <>
       <Table
+      className="table_container"
         dataSource={rateData}
         columns={column}
       ></Table>

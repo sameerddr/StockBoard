@@ -1,6 +1,6 @@
 import { Layout } from "antd";
-
 import React from "react";
+
 import Cards from '../Cards/Cards'
 import { TableComponent } from "../table/TableComponent";
 
