@@ -5,7 +5,6 @@ import Cards from '../Cards/Cards'
 import { TableComponent } from "../table/TableComponent";
 
 import "../Layout/StockLayout.css";
-import '../Cards/Cards.css'
 
 const { Header, Footer, Sider, Content } = Layout;
 function StockLayout() {
