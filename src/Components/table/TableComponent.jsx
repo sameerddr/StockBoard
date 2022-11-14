@@ -3,7 +3,6 @@ import { Table } from "antd";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 
-
 import  column  from './TableComponentStaticDatas';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,7 +29,6 @@ export function TableComponent() {
       .get(url)
       .then((response) => {
         flattenObj(response.data.rates)
-        console.log(response.data.rates);
       })
       .catch((err) => {
         toast.error(err)
