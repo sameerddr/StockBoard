@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import { Line } from "@ant-design/plots";
 
 import "./Graph2.css";
+export const Graphdata2 = createContext()
 
 const DemoLine = () => {
   const [data, setdata] = useState([]);
@@ -50,9 +51,11 @@ const DemoLine = () => {
   };
 
   return (
+    <Graphdata2.Provider value={[data, setdata]}>
     <div className="graph2">
       <Line {...config} />
     </div>
+    </Graphdata2.Provider>
   );
 };
 

@@ -1,19 +1,25 @@
 import React from 'react';
+import Graph3 from '../Graphs/Graph3';
 
 import './Cards.css'
 
-const Cards = () => {
+const Cards = (props) => {
     return (
         // <div className='card-container'>
         <>
             <div className='card'>
                 <div className='stockdata'>
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8q0metut-4bQutjD3LQhql0bfSaXE_4ETJQ&usqp=CAU' className='logo' />
-                    <h1 className='heading'>TSLA</h1>
-                    <p className='percent'>0.25%</p>
+                    <img src={props.image} className='logo' />
+                    <h1 className='heading'>{props.name}</h1>
+                    <p className='percent'>{props.change}</p>
                 </div>
-                <h1 className='heading1'>0.0009812345</h1>
-                <h3 className='vol'>22,143</h3>
+                <div className='flex'>
+                    <div className='flex-column'>
+                        <h1 className='heading1'>{props.price}</h1>
+                        <h3 className='vol'>vol: {props.volume}</h3>
+                    </div>
+                {props.graph}
+                </div>
             </div>
             {/* </div> */}
         </>

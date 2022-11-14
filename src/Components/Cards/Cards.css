@@ -18,7 +18,7 @@ h3{
   .card{
     height: 200px;
     width: 300px;
-    background-color: #111827;
+    background-color: #1F2937;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -61,4 +61,15 @@ h3{
     height: 30px; 
     width: 30px; 
     border-radius: 50% 
+  }
+  .flex{
+    display: flex;
+    height: 100px;
+    width: 300px;
+    justify-content: space-around;
+  }
+  .flex-column{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
   }
