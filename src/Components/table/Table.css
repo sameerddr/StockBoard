@@ -4,8 +4,3 @@ Table{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 700;
 }
-
-Table:hover{
-    background-color: #1F2937;
-    color: white;
-}
