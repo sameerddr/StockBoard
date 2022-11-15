@@ -3,7 +3,6 @@ import axios from "axios";
 import { Column } from "@ant-design/plots";
 
 import "./Graph1.css";
-export const Graphdata1 = createContext()
 
 function Graph1() {
   const [data, setdata] = useState([]);
@@ -59,14 +58,11 @@ function Graph1() {
       ],
     },
   };
-
   return (
     <>
-    <Graphdata1.Provider value={[data,setdata]}>
       <div className="graph1">
         <Column {...config} />;
       </div>
-    </Graphdata1.Provider>
     </>
   );
 }

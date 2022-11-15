@@ -3,7 +3,7 @@ import axios from "axios";
 import { Area } from "@ant-design/plots";
 
 import "./Graph3.css";
-export const Graphdata3 = createContext()
+
 const DemoArea = () => {
   const [data, setdata] = useState([]);
 
@@ -55,11 +55,9 @@ const DemoArea = () => {
   };
 
   return (
-    <Graphdata3.Provider value={[data,setdata]}>
     <div className="graph3">
       <Area {...config} />
     </div>
-    </Graphdata3.Provider>
   );
 };
 

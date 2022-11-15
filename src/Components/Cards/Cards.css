@@ -3,18 +3,6 @@ h3{
     text-align: left;
     color: white;
   }
-  .card-container{
-    height: 88vh;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  /* span{
-    padding-left: 10px;
-  } */
   .card{
     height: 200px;
     width: 300px;
@@ -25,6 +13,7 @@ h3{
     /* justify-content: start; */
     /* justify-content: space-evenly; */
     /* align-items: center; */
+    margin-top: 30px;
   }
   .heading{
     color: white;
