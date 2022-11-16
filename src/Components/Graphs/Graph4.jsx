@@ -1,20 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
-import { Line } from "@ant-design/plots";
+import { Bar } from "@ant-design/plots";
+
+import "./Graph4.css";
 
 const DemoArea = () => {
   const [data, setdata] = useState([]);
 
   const GetApi = async () => {
     let api =
-      "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=600104.SHH&outputsize=full&apikey=W9IPCZT6X76UJZOY";
+      "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=full&apikey=W9IPCZT6X76UJZOY";
 
     const response = await axios.get(api);
+    console.log(response);
     let i = 0;
     let a = [];
-    let data = response.data["Time Series (Daily)"];
+    let data = response.data["Weekly Adjusted Time Series"];
     while (i < Object.keys(data).length) {
-      if (i % 400 == 0) {
+      if (i % 40 == 0) {
         a.push({
           value: data[Object.keys(data)[i]]["3. low"],
           type: "low",
@@ -35,27 +38,19 @@ const DemoArea = () => {
   useEffect(() => {
     GetApi();
   }, []);
-
   const config = {
     data,
     xField: "date",
     yField: "value",
-    legend: false,
-    seriesField: "key",
-    stepType: "hvh",
+    seriesField: "year",
+    legend: {
+      position: "top-left",
+    },
   };
   return (
     <>
       <div className="graph4">
-        <Line
-          style={{
-            Color: "blue",
-            width: "100%",
-            height: "600px",
-            backgroundColor: "pink",
-          }}
-          {...config}
-        />
+        <Bar {...config} />
       </div>
     </>
   );
