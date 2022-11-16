@@ -1,11 +1,20 @@
 import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import { Area } from "@ant-design/plots";
+import { Oval } from 'react-loader-spinner'
 
 import "./Graph3.css";
 
 const DemoArea = () => {
   const [data, setdata] = useState([]);
+  const [loader, setLoader] = useState(false)
+
+  useEffect(() => {
+    setLoader(true)
+    setTimeout(() => {
+      setLoader(false)
+    }, 5000)
+  }, [])
 
   const GetApi = async () => {
     let api =
@@ -56,7 +65,18 @@ const DemoArea = () => {
 
   return (
     <div className="graph3">
-      <Area {...config} />
+      {loader ? <div className="loader"><Oval
+        height={40}
+        width={40}
+        color="blue"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+        ariaLabel='oval-loading'
+        secondaryColor="#4fa94d"
+        strokeWidth={2}
+        strokeWidthSecondary={2}
+      /></div> : <Area {...config} />}
     </div>
   );
 };

@@ -1,11 +1,21 @@
 import React, { useEffect, useState, createContext } from "react";
 import axios from "axios";
 import { Column } from "@ant-design/plots";
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import { Oval } from 'react-loader-spinner'
 
 import "./Graph1.css";
 
 function Graph1() {
   const [data, setdata] = useState([]);
+  const [loader, setLoader] = useState(false)
+
+  useEffect(() => {
+    setLoader(true)
+    setTimeout(() => {
+      setLoader(false)
+    }, 5000)
+  }, [])
 
   const GetApi = async () => {
     let api =
@@ -32,7 +42,7 @@ function Graph1() {
     }
     setdata(a);
   };
-// console.log(data)
+  // console.log(data)
   useEffect(() => {
     GetApi();
   }, []);
@@ -61,7 +71,19 @@ function Graph1() {
   return (
     <>
       <div className="graph1">
-        <Column {...config} />;
+        {loader ? <div className="loader"><Oval
+          height={40}
+          width={40}
+          color="blue"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+          ariaLabel='oval-loading'
+          secondaryColor="#4fa94d"
+          strokeWidth={2}
+          strokeWidthSecondary={2}
+        /></div> : <Column {...config} />}
+
       </div>
     </>
   );
