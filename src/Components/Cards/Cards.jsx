@@ -1,34 +1,26 @@
-import { Card, Collapse } from 'antd';
 import React from 'react';
+
 import './Cards.css'
 
-const Cards = () => {
+const Cards = ({image, name, change, price, volume, graph}) => {
     return (
         // <div className='card-container'>
         <>
-            <Card
-                title="TSLA"
-                headStyle={{ color: "white" }}
-                hoverable={true}
-                bordered={false}
-                style={{ backgroundColor: '#111827', width: "280px", height: "200px", borderRadius: '10px' }}
-                extra={<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8q0metut-4bQutjD3LQhql0bfSaXE_4ETJQ&usqp=CAU'
-                    style={{ height: "50px", width: "50px", borderRadius: '50%' }} />}
-            >
-                <h3>price:<span>$296.00</span></h3>
-            </Card>
-            <Card
-                title="AMD"
-                headStyle={{ color: "white" }}
-                hoverable={true}
-                bordered={false}
-                style={{ backgroundColor: '#111827', width: "280px", height: "200px", borderRadius: '10px' }}
-                extra={<img src='https://pbs.twimg.com/profile_images/1145524454170062848/U4lxVYEw_400x400.png'
-                    style={{ height: "50px", width: "50px", borderRadius: '50%' }} />}
-            >
-                <h3 >price:<span> $64.32</span></h3>
-            </Card>
-        {/* </div> */}
+            <div className='card'>
+                <div className='stockdata'>
+                    <img src={image} className='logo' />
+                    <h1 className='heading'>{name}</h1>
+                    <p className='percent'>{change}%</p>
+                </div>
+                <div className='flex'>
+                    <div className='flex-column'>
+                        <h1 className='heading1'>{price}</h1>
+                        <h3 className='vol'>vol: {volume}</h3>
+                    </div>
+                {graph}
+                </div>
+            </div>
+            {/* </div> */}
         </>
     )
 }
