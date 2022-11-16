@@ -1,4 +1,8 @@
-import { Layout } from "antd";
+import { Layout } from "antd"
+
+import { TableComponent } from "../table/TableComponent";
+
+import "../Layout/StockLayout.css";
 
 import React, {useState, useEffect, useContext} from "react";
 
@@ -25,6 +29,20 @@ function StockLayout() {
       <Layout>
         <Header className="layoutHeader">Header</Header>
         <Layout>
+        <Sider width={400} className="slider">
+            <div className="card-container">
+              <Cards />
+              <Cards />
+            </div>
+          </Sider>
+            {/* <Sider width={400} className="slider"><div className="card-container"><Cards/></div></Sider> */}
+          <Content className="site-layout-content">
+          <TableComponent/>
+          </Content>
+          {/* <Graph1 />
+          <Graph2 />
+          <Graph3 /> */}
+          <Content className="site-layout-content"></Content>
           <Sider width={400} className="slider">
               <Cards name={'IBM'} graph={<Graph1/>} image={IBMimg} price={'$95.00'} volume={'58531'} change={'0.36'}/>
               <Cards name={'TRT'} graph={<Graph2/>} image={TRTimg} price={'$48.22'} volume={'19235'} change={'0.24'}/>
