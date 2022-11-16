@@ -5,7 +5,6 @@ Table{
     font-weight: 700;
     width: 700px;
 }
-
 Table:hover{
     background-color: #1F2937;
     color: black;

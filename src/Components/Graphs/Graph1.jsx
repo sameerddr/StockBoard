@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, createContext } from "react";
 import axios from "axios";
 import { Column } from "@ant-design/plots";
 
@@ -32,7 +32,7 @@ function Graph1() {
     }
     setdata(a);
   };
-
+// console.log(data)
   useEffect(() => {
     GetApi();
   }, []);
@@ -58,7 +58,6 @@ function Graph1() {
       ],
     },
   };
-
   return (
     <>
       <div className="graph1">

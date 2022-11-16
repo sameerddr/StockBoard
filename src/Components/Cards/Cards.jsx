@@ -2,18 +2,23 @@ import React from 'react';
 
 import './Cards.css'
 
-const Cards = () => {
+const Cards = ({image, name, change, price, volume, graph}) => {
     return (
         // <div className='card-container'>
         <>
             <div className='card'>
                 <div className='stockdata'>
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8q0metut-4bQutjD3LQhql0bfSaXE_4ETJQ&usqp=CAU' className='logo' />
-                    <h1 className='heading'>TSLA</h1>
-                    <p className='percent'>0.25%</p>
+                    <img src={image} className='logo' />
+                    <h1 className='heading'>{name}</h1>
+                    <p className='percent'>{change}%</p>
                 </div>
-                <h1 className='heading1'>0.0009812345</h1>
-                <h3 className='vol'>22,143</h3>
+                <div className='flex'>
+                    <div className='flex-column'>
+                        <h1 className='heading1'>{price}</h1>
+                        <h3 className='vol'>vol: {volume}</h3>
+                    </div>
+                {graph}
+                </div>
             </div>
             {/* </div> */}
         </>

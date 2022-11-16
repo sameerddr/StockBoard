@@ -4,12 +4,18 @@
 }
 
 .site-layout-content {
-    height: 88vh;
+    height: auto;
     padding: 24px;
     background: rgb(159, 74, 74);
 }
 
 .slider {
     min-width: 400px;
-    background-color: #1F2937;
+    background-color:#111827;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
 }
