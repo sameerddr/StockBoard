@@ -1,5 +1,6 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import { Bar } from "@ant-design/plots";
 
 import "./Graph4.css";
@@ -31,13 +32,13 @@ const DemoArea = () => {
       }
       i++;
     }
-    // console.log(a);
     setdata(a);
   };
 
   useEffect(() => {
     GetApi();
   }, []);
+
   const config = {
     data,
     xField: "date",

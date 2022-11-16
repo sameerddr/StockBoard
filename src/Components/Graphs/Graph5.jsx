@@ -1,5 +1,6 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import { Bar } from "@ant-design/plots";
 
 import "./Graph5.css";
@@ -12,7 +13,6 @@ const DemoArea = () => {
       "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=TSCO.LON&apikey==W9IPCZT6X76UJZOY";
 
     const response = await axios.get(api);
-    console.log(response);
     let i = 0;
     let a = [];
     let data = response.data["Weekly Adjusted Time Series"];
@@ -31,13 +31,13 @@ const DemoArea = () => {
       }
       i++;
     }
-    // console.log(a);
     setdata(a);
   };
 
   useEffect(() => {
     GetApi();
   }, []);
+
   const config = {
     data: data.reverse(),
     xField: "date",
