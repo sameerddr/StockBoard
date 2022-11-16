@@ -13,7 +13,6 @@ const DemoArea = () => {
       "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=full&apikey=W9IPCZT6X76UJZOY";
 
     const response = await axios.get(api);
-    console.log(response);
     let i = 0;
     let a = [];
     let data = response.data["Weekly Adjusted Time Series"];
