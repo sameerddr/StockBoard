@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import "./App.css";
+
+import Header from "./components/header/Header";
+import { Route, Routes } from "react-router-dom";
+import Dashboardnav from "./components/header/Dashboardnav";
+import Exchange from "./components/header/Exchange";
+import Wallett from "./components/header/Wallett";
+import Market from "./components/header/Market";
+import Login from "./components/header/Login";
+import Register from "./components/header/Register";
+import WelcomePage from "./components/header/WelcomePage";
+import Main from "./components/header/Main";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Dashboardnav />} />
+        <Route path="/Exchange" element={<Exchange />} />
+        <Route path="/Wallett" element={<Wallett />} />
+        <Route path="/Market" element={<Market />} />
+        <Route path="/Main" element={<Main />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/welcomePage" element={<WelcomePage />} />
+      </Routes>
     </div>
   );
 }
