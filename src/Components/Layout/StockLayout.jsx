@@ -1,16 +1,13 @@
 import { Layout } from "antd"
 
-import "../Layout/StockLayout.css";
-
 import React, {useState, useEffect, useContext} from "react";
-
 import Cards from "../Cards/Cards";
 import Graph1 from "../Graphs/Graph1";
 import Graph2 from "../Graphs/Graph2";
 import Graph3 from "../Graphs/Graph3";
 import { TableComponent } from "../table/TableComponent";
 
-import "../Cards/Cards.css";
+import "../Layout/StockLayout.css";
 
 const { Header, Footer, Sider, Content } = Layout;
 function StockLayout() {

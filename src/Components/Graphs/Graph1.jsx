@@ -1,9 +1,8 @@
 import React, { useEffect, useState, createContext } from "react";
 import axios from "axios";
 import { Column } from "@ant-design/plots";
-// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import { Oval } from 'react-loader-spinner'
-
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import "./Graph1.css";
 
 function Graph1() {
@@ -71,7 +70,8 @@ function Graph1() {
   return (
     <>
       <div className="graph1">
-        {loader ? <div className="loader"><Oval
+        {loader ? <div className="loader">
+          <Oval
           height={40}
           width={40}
           color="blue"
@@ -83,7 +83,6 @@ function Graph1() {
           strokeWidth={2}
           strokeWidthSecondary={2}
         /></div> : <Column {...config} />}
-
       </div>
     </>
   );
