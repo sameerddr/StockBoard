@@ -1,7 +1,5 @@
 import { Layout } from "antd"
 
-import { TableComponent } from "../table/TableComponent";
-
 import "../Layout/StockLayout.css";
 
 import React, {useState, useEffect, useContext} from "react";
@@ -11,6 +9,7 @@ import Graph1 from "../Graphs/Graph1";
 import Graph2 from "../Graphs/Graph2";
 import Graph3 from "../Graphs/Graph3";
 import { TableComponent } from "../table/TableComponent";
+import { Trade } from "../trade/Trade";
 
 import "../Layout/StockLayout.css";
 import "../Cards/Cards.css";
@@ -29,28 +28,20 @@ function StockLayout() {
       <Layout>
         <Header className="layoutHeader">Header</Header>
         <Layout>
-        <Sider width={400} className="slider">
-            <div className="card-container">
-              <Cards />
-              <Cards />
-            </div>
-          </Sider>
-            {/* <Sider width={400} className="slider"><div className="card-container"><Cards/></div></Sider> */}
-          <Content className="site-layout-content">
-          <TableComponent/>
-          </Content>
           {/* <Graph1 />
           <Graph2 />
           <Graph3 /> */}
-          <Content className="site-layout-content"></Content>
           <Sider width={400} className="slider">
               <Cards name={'IBM'} graph={<Graph1/>} image={IBMimg} price={'$95.00'} volume={'58531'} change={'0.36'}/>
               <Cards name={'TRT'} graph={<Graph2/>} image={TRTimg} price={'$48.22'} volume={'19235'} change={'0.24'}/>
               <Cards name={'Reliance'} graph={<Graph3/>} image={RELimg} price={'$122.02'} volume={'143295'} change={'0.43'}/>
           </Sider>
-          <Content className="site-layout-content"><TableComponent/></Content>
+          <Content className="site-layout-content">
+            <TableComponent/>
+          </Content>
         </Layout>
       </Layout>
+      <Trade/>
     </>
   );
 }
