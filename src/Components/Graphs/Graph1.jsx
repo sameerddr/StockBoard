@@ -43,6 +43,7 @@ function Graph1() {
   };
   // console.log(data)
   useEffect(() => {
+    
     GetApi();
   }, []);
 
