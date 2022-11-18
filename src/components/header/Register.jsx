@@ -66,9 +66,7 @@ function Register() {
                 placeholder="Enter password"
                 name="password"
                 value={inputt.password}
-                onChange={(e) => {
-                  setInputt({ ...inputt, [e.target.name]: e.target.value });
-                }}
+                onChange={handaleInputRegister}
               />
             </div>
             <div className="btn_div">
