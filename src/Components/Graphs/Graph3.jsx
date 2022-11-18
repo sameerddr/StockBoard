@@ -1,11 +1,13 @@
 import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import { Area } from "@ant-design/plots";
+import Loader from "./Loader";
 
 import "./Graph3.css";
 
 const DemoArea = () => {
   const [data, setdata] = useState([]);
+  const [loader, setloader] = useState(false);
 
   const GetApi = async () => {
     let api =
@@ -33,6 +35,7 @@ const DemoArea = () => {
     }
     // console.log(a);
     setdata(a);
+    setloader(true);
   };
 
   useEffect(() => {
@@ -55,9 +58,17 @@ const DemoArea = () => {
   };
 
   return (
-    <div className="graph3">
-      <Area {...config} />
-    </div>
+    <>
+      {loader ? (
+        <>
+          <div className="graph3">
+            <Area {...config} />
+          </div>
+        </>
+      ) : (
+        <Loader />
+      )}
+    </>
   );
 };
 
