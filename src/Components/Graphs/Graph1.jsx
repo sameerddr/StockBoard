@@ -7,14 +7,6 @@ import "./Graph1.css";
 
 function Graph1() {
   const [data, setdata] = useState([]);
-  const [loader, setLoader] = useState(false)
-
-  useEffect(() => {
-    setLoader(true)
-    setTimeout(() => {
-      setLoader(false)
-    }, 5000)
-  }, [])
 
   const GetApi = async () => {
     let api =
@@ -43,7 +35,7 @@ function Graph1() {
   };
   // console.log(data)
   useEffect(() => {
-    
+
     GetApi();
   }, []);
 
@@ -71,19 +63,7 @@ function Graph1() {
   return (
     <>
       <div className="graph1">
-        {loader ? <div className="loader">
-          <Oval
-          height={40}
-          width={40}
-          color="blue"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-          ariaLabel='oval-loading'
-          secondaryColor="#4fa94d"
-          strokeWidth={2}
-          strokeWidthSecondary={2}
-        /></div> : <Column {...config} />}
+        <Column {...config} />
       </div>
     </>
   );
