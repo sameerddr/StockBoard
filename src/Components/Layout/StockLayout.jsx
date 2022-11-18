@@ -1,7 +1,10 @@
 import { Layout } from "antd";
 
+<<<<<<< HEAD
 // import { TableComponent } from "../table/TableComponent";
 
+=======
+>>>>>>> c14941f9c8bfc9deb61604f78999466d14226b3e
 import "../Layout/StockLayout.css";
 
 import React, { useState, useEffect, useContext } from "react";
@@ -11,6 +14,7 @@ import Graph1 from "../Graphs/Graph1";
 import Graph2 from "../Graphs/Graph2";
 import Graph3 from "../Graphs/Graph3";
 import { TableComponent } from "../table/TableComponent";
+import { Trade } from "../trade/Trade";
 
 import "../Layout/StockLayout.css";
 import "../Cards/Cards.css";
@@ -32,6 +36,7 @@ function StockLayout() {
       <Layout>
         <Header className="layoutHeader">Header</Header>
         <Layout>
+<<<<<<< HEAD
           <Sider width={400} className="slider">
             <div className="card-container">
               <Cards />
@@ -42,10 +47,11 @@ function StockLayout() {
           <Content className="site-layout-content">
             <TableComponent />
           </Content>
+=======
+>>>>>>> c14941f9c8bfc9deb61604f78999466d14226b3e
           {/* <Graph1 />
           <Graph2 />
           <Graph3 /> */}
-          <Content className="site-layout-content"></Content>
           <Sider width={400} className="slider">
             <Cards
               name={"IBM"}
@@ -73,10 +79,15 @@ function StockLayout() {
             />
           </Sider>
           <Content className="site-layout-content">
+<<<<<<< HEAD
             <TableComponent />
+=======
+            <TableComponent/>
+>>>>>>> c14941f9c8bfc9deb61604f78999466d14226b3e
           </Content>
         </Layout>
       </Layout>
+      <Trade/>
     </>
   );
 }
