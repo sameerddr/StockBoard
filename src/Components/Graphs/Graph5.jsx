@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import Loader from "./Loader";
+
+
 
 import { Bar } from "@ant-design/plots";
 
@@ -9,7 +12,6 @@ import "./Graph5.css";
 const DemoArea = () => {
   const [data, setdata] = useState([]);
   const [loader, setloader] = useState(false);
-
   const GetApi = async () => {
     let api =
       "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=TSCO.LON&apikey==W9IPCZT6X76UJZOY";
@@ -34,7 +36,9 @@ const DemoArea = () => {
       i++;
     }
     setdata(a);
+
     setloader(true);
+
   };
 
   useEffect(() => {
@@ -57,6 +61,7 @@ const DemoArea = () => {
   };
   return (
     <>
+
       {loader ? (
         <>
           <div className="graph5">
@@ -66,6 +71,10 @@ const DemoArea = () => {
       ) : (
         <Loader />
       )}
+      <div className="graph5">
+        <Bar {...config} />
+      </div>
+
     </>
   );
 };
