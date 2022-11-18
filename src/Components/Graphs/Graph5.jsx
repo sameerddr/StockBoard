@@ -3,8 +3,6 @@ import axios from "axios";
 
 import Loader from "./Loader";
 
-
-
 import { Bar } from "@ant-design/plots";
 
 import "./Graph5.css";
@@ -71,10 +69,6 @@ const DemoArea = () => {
       ) : (
         <Loader />
       )}
-      <div className="graph5">
-        <Bar {...config} />
-      </div>
-
     </>
   );
 };

@@ -1,0 +1,26 @@
+.main-cont{
+    background-color: #1F2937;
+    height: auto;
+    width: 810px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.progress-bar{
+    padding-top: 20px;
+}
+.progress-bar .ant-progress-text{
+    color: white;
+}
+.progress-bar .ant-statistic-content-value{
+    color: white;
+}
+.progress-bar .ant-statistic-title{
+    color: white;
+}
+.progress-bar .ant-skeleton-content .ant-skeleton-title{
+    background-color: rgb(68, 132, 241);
+}
