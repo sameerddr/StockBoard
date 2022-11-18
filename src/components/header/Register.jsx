@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
-import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { MainContext } from "../../context/MainContext";
 import { CloseOutlined } from "@ant-design/icons";
+
+import { MainContext } from "../../context/MainContext";
+
+import "./Register.css";
 
 function Register() {
   const navigate = useNavigate();
@@ -15,8 +17,12 @@ function Register() {
     localStorage.setItem("users", JSON.stringify(inputt));
     navigate("/Login");
   };
+
+  const handaleInputRegister = (e) => {
+    setInputt({ ...inputt, [e.target.name]: e.target.value });
+  };
   return (
-    <>
+    <div className="body-register ">
       <div className="formContainer">
         <NavLink to="/">
           <CloseOutlined className="close" />
@@ -34,9 +40,7 @@ function Register() {
                 placeholder="Enter your name"
                 name="name"
                 value={inputt.name}
-                onChange={(e) => {
-                  setInputt({ ...inputt, [e.target.name]: e.target.value });
-                }}
+                onChange={handaleInputRegister}
               />
             </div>
             <div>
@@ -49,9 +53,7 @@ function Register() {
                 placeholder="Enter your email"
                 name="email"
                 value={inputt.email}
-                onChange={(e) => {
-                  setInputt({ ...inputt, [e.target.name]: e.target.value });
-                }}
+                onChange={handaleInputRegister}
               />
             </div>
             <div>
@@ -85,7 +87,7 @@ function Register() {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 }
 

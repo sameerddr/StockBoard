@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
-
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { MainContext } from "../../context/MainContext";
 import {
   FacebookOutlined,
   InstagramOutlined,
@@ -10,6 +8,8 @@ import {
   CloseOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+
+import { MainContext } from "../../context/MainContext";
 
 import "./Login.css";
 
@@ -32,8 +32,12 @@ const Login = () => {
     }
   };
 
+  const handaleInput = (e) => {
+    setInput({ ...input, [e.target.name]: e.target.value });
+  };
+
   return (
-    <>
+    <div div className="body-login">
       <div className="form-main">
         <div className="formContainer">
           <NavLink to="/">
@@ -54,9 +58,7 @@ const Login = () => {
                   placeholder="Enter Email"
                   name="email"
                   value={input.email}
-                  onChange={(e) => {
-                    setInput({ ...input, [e.target.name]: e.target.value });
-                  }}
+                  onChange={handaleInput}
                 />
               </div>
 
@@ -70,9 +72,7 @@ const Login = () => {
                   placeholder="Enter password"
                   name="password"
                   value={input.password}
-                  onChange={(e) => {
-                    setInput({ ...input, [e.target.name]: e.target.value });
-                  }}
+                  onChange={handaleInput}
                 />
               </div>
 
@@ -103,7 +103,7 @@ const Login = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

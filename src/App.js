@@ -1,8 +1,6 @@
-// import logo from './logo.svg';
-// import "./App.css";
+import { Route, Routes } from "react-router-dom";
 
 import Header from "./components/header/Header";
-import { Route, Routes } from "react-router-dom";
 import Dashboardnav from "./components/header/Dashboardnav";
 import Exchange from "./components/header/Exchange";
 import Wallett from "./components/header/Wallett";
@@ -11,6 +9,7 @@ import Login from "./components/header/Login";
 import Register from "./components/header/Register";
 import WelcomePage from "./components/header/WelcomePage";
 import Main from "./components/header/Main";
+import StockLayout from "./components/Layout/StockLayout";
 
 function App() {
   return (
