@@ -26,6 +26,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/welcomePage" element={<WelcomePage />} />
       </Routes>
+      <StockLayout />
+      {/* <Cards/> */}
     </div>
   );
 }

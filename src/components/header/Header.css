@@ -68,7 +68,7 @@
   flex-wrap: wrap;
 }
 .right-navbar {
-  width: 600px;
+  width: 500px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

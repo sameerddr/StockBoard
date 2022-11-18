@@ -61,9 +61,7 @@ const Header = () => {
                 LOGOUT
               </button>
               <div>
-                <p className="user-text">
-                  Loggedin As {userName.name.toUpperCase()}
-                </p>
+                <p className="user-text">{userName.name.toUpperCase()}</p>
               </div>
             </>
           ) : (
