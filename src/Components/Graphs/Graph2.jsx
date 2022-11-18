@@ -1,11 +1,13 @@
 import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
 import { Line } from "@ant-design/plots";
+import Loader from "./Loader";
 
 import "./Graph2.css";
 
 const DemoLine = () => {
   const [data, setdata] = useState([]);
+  const [loader, setloader] = useState(false);
 
   const GetApi = async () => {
     let api =
@@ -32,6 +34,7 @@ const DemoLine = () => {
       i++;
     }
     setdata(a);
+    setloader(true);
   };
 
   useEffect(() => {
@@ -50,9 +53,17 @@ const DemoLine = () => {
   };
 
   return (
-    <div className="graph2">
-      <Line {...config} />
-    </div>
+    <>
+      {loader ? (
+        <>
+          <div className="graph2">
+            <Line {...config} />
+          </div>
+        </>
+      ) : (
+        <Loader />
+      )}
+    </>
   );
 };
 

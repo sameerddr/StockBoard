@@ -1,4 +1,4 @@
-import { Layout } from "antd"
+import { Layout } from "antd";
 
 import React, {useState, useEffect, useContext} from "react";
 import Cards from "../Cards/Cards";
