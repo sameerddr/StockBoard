@@ -8,6 +8,7 @@ import Graph3 from "../Graphs/Graph3";
 import Graph5 from "../Graphs/Graph5";
 import { TableComponent } from "../table/TableComponent";
 import Dashboard from "../Dashboard/Dashboard";
+import { Trade } from "../trade/Trade";
 
 import "../Layout/StockLayout.css";
 
