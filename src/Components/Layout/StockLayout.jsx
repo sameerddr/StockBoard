@@ -1,10 +1,5 @@
 import { Layout } from "antd";
 
-<<<<<<< HEAD
-// import { TableComponent } from "../table/TableComponent";
-
-=======
->>>>>>> c14941f9c8bfc9deb61604f78999466d14226b3e
 import "../Layout/StockLayout.css";
 
 import React, { useState, useEffect, useContext } from "react";
@@ -36,19 +31,6 @@ function StockLayout() {
       <Layout>
         <Header className="layoutHeader">Header</Header>
         <Layout>
-<<<<<<< HEAD
-          <Sider width={400} className="slider">
-            <div className="card-container">
-              <Cards />
-              <Cards />
-            </div>
-          </Sider>
-          {/* <Sider width={400} className="slider"><div className="card-container"><Cards/></div></Sider> */}
-          <Content className="site-layout-content">
-            <TableComponent />
-          </Content>
-=======
->>>>>>> c14941f9c8bfc9deb61604f78999466d14226b3e
           {/* <Graph1 />
           <Graph2 />
           <Graph3 /> */}
@@ -79,15 +61,11 @@ function StockLayout() {
             />
           </Sider>
           <Content className="site-layout-content">
-<<<<<<< HEAD
             <TableComponent />
-=======
-            <TableComponent/>
->>>>>>> c14941f9c8bfc9deb61604f78999466d14226b3e
           </Content>
         </Layout>
       </Layout>
-      <Trade/>
+      <Trade />
     </>
   );
 }
