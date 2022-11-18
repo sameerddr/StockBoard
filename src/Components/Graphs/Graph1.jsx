@@ -37,7 +37,7 @@ function Graph1() {
     } catch (error) {
       console.log("Error" + error);
     } finally {
-      setloader(false);
+      // setloader(false);
     }
   };
   useEffect(() => {

@@ -39,7 +39,7 @@ const DemoArea = () => {
     } catch (error) {
       console.log("Error" + error);
     } finally {
-      setloader(false);
+      // setloader(false);
     }
   };
 
