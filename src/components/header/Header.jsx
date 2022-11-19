@@ -9,10 +9,27 @@ import "./Header.css";
 
 const Header = () => {
   const { isloggedin, setIsLoggedin } = useContext(MainContext);
-
   const userName = JSON.parse(localStorage.getItem("users"));
-
   const navigate = useNavigate();
+
+  const links = [
+    {
+      to: "/",
+      name: "Dashboard",
+    },
+    {
+      to: "/Exchange",
+      name: "Exchange",
+    },
+    {
+      to: "/Wallett",
+      name: "Wallet",
+    },
+    {
+      to: "/Market",
+      name: "Market",
+    },
+  ];
 
   const handleLogout = () => {
     localStorage.removeItem("LoggedIn");
@@ -23,28 +40,13 @@ const Header = () => {
     <>
       <div className="main-navbar">
         <div className="left-navbar">
-          <h2 className="h-title">kshit</h2>
+          <h2 className="h-title">StockBoard</h2>
           <ul className="list">
-            <li>
-              <NavLink className="navlink" to="/" end>
-                Dashboard
+            {links.map((linkss) => (
+              <NavLink className="navlink" to={linkss.to}>
+                {linkss.name}
               </NavLink>
-            </li>
-            <li>
-              <NavLink className="navlink" to="/Exchange">
-                Exchange
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="navlink" to="/Wallett">
-                Wallett
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="navlink" to="/Market">
-                Market
-              </NavLink>
-            </li>
+            ))}
           </ul>
         </div>
         <div className="right-navbar">
