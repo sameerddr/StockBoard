@@ -10,6 +10,10 @@ import Register from "./components/header/Register";
 import WelcomePage from "./components/header/WelcomePage";
 import Main from "./components/header/Main";
 import StockLayout from "./components/Layout/StockLayout";
+// import Graph1 from "./Components/Graphs/Graph1";
+
+import "antd/dist/antd.css";
+import "./App.css";
 
 function App() {
   return (

@@ -13,7 +13,6 @@ function Register() {
   const { inputt, setInputt } = useContext(MainContext);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     localStorage.setItem("users", JSON.stringify(inputt));
     navigate("/Login");
   };

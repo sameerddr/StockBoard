@@ -1,11 +1,13 @@
 import React, { useEffect, useState, createContext } from "react";
 import axios from "axios";
 import { Column } from "@ant-design/plots";
+import Loader from "./Loader";
 
 import "./Graph1.css";
 
 function Graph1() {
   const [data, setdata] = useState([]);
+  const [loader, setloader] = useState(false);
 
   const GetApi = async () => {
     let api =
@@ -31,9 +33,11 @@ function Graph1() {
       i++;
     }
     setdata(a);
+    setloader(true);
   };
-// console.log(data)
+  // console.log(data)
   useEffect(() => {
+
     GetApi();
   }, []);
 
@@ -60,9 +64,15 @@ function Graph1() {
   };
   return (
     <>
-      <div className="graph1">
-        <Column {...config} />;
-      </div>
+      {loader ? (
+        <>
+          <div className="graph1">
+            <Column {...config} />;
+          </div>
+        </>
+      ) : (
+        <Loader />
+      )}
     </>
   );
 }

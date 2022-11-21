@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "./Loader";
 
 import { Bar } from "@ant-design/plots";
 
@@ -7,6 +8,7 @@ import "./Graph4.css";
 
 const DemoArea = () => {
   const [data, setdata] = useState([]);
+  const [loader, setloader] = useState(false);
 
   const GetApi = async () => {
     let api =
@@ -32,6 +34,7 @@ const DemoArea = () => {
       i++;
     }
     setdata(a);
+    setloader(true);
   };
 
   useEffect(() => {
@@ -49,9 +52,15 @@ const DemoArea = () => {
   };
   return (
     <>
-      <div className="graph4">
-        <Bar {...config} />
-      </div>
+      {loader ? (
+        <>
+          <div className="graph4">
+            <Bar {...config} />
+          </div>
+        </>
+      ) : (
+        <Loader />
+      )}
     </>
   );
 };

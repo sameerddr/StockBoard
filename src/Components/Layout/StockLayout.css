@@ -1,12 +1,12 @@
 .layoutHeader {
-    background-color: aqua;
+    background-color: #1F2937;
     height: 12vh;
 }
 
 .site-layout-content {
     height: auto;
     padding: 24px;
-    background: rgb(159, 74, 74);
+    background-color: #111827;
 }
 
 .slider {

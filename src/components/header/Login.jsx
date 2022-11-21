@@ -18,7 +18,6 @@ const Login = () => {
   const { input, setInput, setIsLoggedin } = useContext(MainContext);
 
   const handleLogin = (e) => {
-    e.preventDefault();
     const alreadyLoggedUser = JSON.parse(localStorage.getItem("users"));
     if (
       input.email === alreadyLoggedUser.email &&

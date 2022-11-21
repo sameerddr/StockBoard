@@ -9,3 +9,6 @@ Table:hover{
     background-color: #1F2937;
     color: black;
 }
+.rate_table .ant-table-thead > tr > th{
+    background-color: rgb(61, 151, 254);
+}

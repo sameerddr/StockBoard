@@ -40,7 +40,7 @@ export function TableComponent() {
   return (
     <>
       <Table
-      className="table_container_div"
+      className="rate_table"
         dataSource={rateData}
         columns={column}
       ></Table>
