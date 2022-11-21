@@ -94,14 +94,15 @@
 
 .user-text {
   color: white;
+  margin-top: 10px;
 }
 
 /* =========== search input css class ================= */
 
 .search-input {
   border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 7px 12px 7px;
+  border-radius: 8px;
+  padding: 5px 10px 5px;
   transition: 0.4s;
   outline: none;
 }

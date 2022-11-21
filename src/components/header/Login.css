@@ -10,9 +10,9 @@ body {
 .formContainer {
   background: white;
   width: 300px;
-  height: 350px;
+  height: 400px;
   position: absolute;
-  top: 37%;
+  top: 30%;
   left: 45%;
   margin: -50px 0 0 -50px;
   display: flex;
@@ -26,7 +26,7 @@ body {
   height: 300px;
 }
 .content-div {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .email-input {
@@ -64,7 +64,7 @@ body {
   transition: 0.5s;
 }
 .social-media {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .or {
   text-align: center;
@@ -80,11 +80,12 @@ body {
 }
 .need-account {
   font-size: 13px;
-  margin-top: 10px;
+  padding: 10px;
   text-align: center;
 }
 .register {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .close {

@@ -20,7 +20,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route exact path="/" element={<Dashboardnav />} />
+        {/* <Route exact path="/" element={<Dashboardnav />} /> */}
+        <Route exact path="/" element={<StockLayout />} />
         <Route path="/Exchange" element={<Exchange />} />
         <Route path="/Wallett" element={<Wallett />} />
         <Route path="/Market" element={<Market />} />
@@ -29,7 +30,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/welcomePage" element={<WelcomePage />} />
       </Routes>
-      <StockLayout />
+      {/* <StockLayout /> */}
       {/* <Cards/> */}
     </div>
   );
