@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ======================main navbar css===================== */
+.main-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: #111827;
+  height: 12vh;
+}
+.list {
+  width: 400px;
+  font-size: medium;
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+  font-weight: bold;
+}
+.h-title {
+  color: white;
+}
+.navlink {
+  color: white;
+  text-decoration: none;
+}
+.bell-inner {
+  color: white;
+  font-weight: bolder;
+  font-size: 22px;
+  animation: bells 1.2s linear infinite alternate-reverse;
+}
+@keyframes bells {
+  0% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
+.bell {
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+.bell::after {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #111827;
+}
+.left-navbar {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.right-navbar {
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* =============login btn css ================= */
+
+.login-btn {
+  background-color: #002ead;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  min-height: 33px;
+  min-width: 100px;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: #468be4;
+  transition: 0.5s;
+}
+
+.user-text {
+  color: white;
+  margin-top: 10px;
+}
+
+/* =========== search input css class ================= */
+
+.search-input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px 10px 5px;
+  transition: 0.4s;
+  outline: none;
+}
+
+/* ======================= navlink activeted ========================= */
+.active {
+  color: orange;
+}

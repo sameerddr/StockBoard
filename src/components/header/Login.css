@@ -1,0 +1,107 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(4, 6, 39);
+}
+
+.formContainer {
+  background: white;
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  margin: -50px 0 0 -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.main-login-div {
+  width: 260px;
+  height: 300px;
+}
+.content-div {
+  margin-top: 5px;
+}
+
+.email-input {
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 7px 12px 7px;
+  transition: 0.4s;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.password-input {
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 7px 12px 7px;
+  transition: 0.4s;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.submit_btn {
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 7px 12px 7px;
+  transition: 0.4s;
+  outline: none;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.submit_btn:hover {
+  background-color: #468be4;
+  transition: 0.5s;
+}
+.social-media {
+  margin-top: 5px;
+}
+.or {
+  text-align: center;
+}
+.social-icon {
+  margin-top: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+.icon {
+  font-size: 22px;
+  margin: 3px;
+}
+.need-account {
+  font-size: 13px;
+  padding: 10px;
+  text-align: center;
+}
+.register {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.close {
+  top: 15px;
+  right: 15px;
+  position: absolute;
+  transition: transform 0.25s, opacity 0.25s;
+  opacity: 0.7;
+  cursor: pointer;
+  font-family: serif;
+  line-height: 1;
+}
+.close:before {
+  content: "\d7";
+}
+.close:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
