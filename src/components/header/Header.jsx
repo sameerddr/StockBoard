@@ -18,6 +18,7 @@ const Header = () => {
       name: "Dashboard",
     },
     {
+<<<<<<< HEAD
       to: "/Exchange",
       name: "Trading",
     },
@@ -28,6 +29,18 @@ const Header = () => {
     {
       to: "/Market",
       name: "Contact",
+=======
+      to: "/trade",
+      name: "Trade",
+    },
+    {
+      to: "/market",
+      name: "Market",
+>>>>>>> 5dd878315c77a6dd151a04d0f0daa6d4183fed3f
+    },
+    {
+      to: "/contact",
+      name: "Contact us",
     },
   ];
 
