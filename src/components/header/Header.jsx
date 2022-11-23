@@ -19,15 +19,15 @@ const Header = () => {
     },
     {
       to: "/Exchange",
-      name: "Exchange",
+      name: "Trading",
     },
     {
       to: "/Wallett",
-      name: "Wallet",
+      name: "Market",
     },
     {
       to: "/Market",
-      name: "Market",
+      name: "Contact",
     },
   ];
 
