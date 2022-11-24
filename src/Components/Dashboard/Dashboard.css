@@ -1,7 +1,7 @@
 .main-cont{
     background-color: #1F2937;
     height: auto;
-    width: 810px;
+    width: 63vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -12,7 +12,7 @@
 .progress-bar{
     padding-top: 20px;
 }
-.progress-bar .ant-progress-text{
+.progress-bar .ant-progress-circle .ant-progress-text{
     color: white;
 }
 .progress-bar .ant-statistic-content-value{
