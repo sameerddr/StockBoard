@@ -11,13 +11,12 @@
 .container-display {
   text-align: center;
   height: 250px;
-  width: 550px;
+  width: 600px;
   background-color: rgb(175, 243, 248);
   border-radius: 10px;
 }
 .animate-charcter {
   margin-top: 1.5rem;
-  text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
     #231557 0%,
@@ -28,7 +27,7 @@
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
-  color: #fff;
+  /* color: #fff; */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

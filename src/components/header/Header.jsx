@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { BellFilled } from "@ant-design/icons";
+import { BellFilled, UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 
 import { MainContext } from "../../context/MainContext";
@@ -8,9 +8,13 @@ import { MainContext } from "../../context/MainContext";
 import "./Header.css";
 
 const Header = () => {
-  const { isloggedin, setIsLoggedin } = useContext(MainContext);
+  const { isloggedin, setIsLoggedin, setSearch } = useContext(MainContext);
   const userName = JSON.parse(localStorage.getItem("users"));
   const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
 
   const links = [
     {
@@ -18,25 +22,12 @@ const Header = () => {
       name: "Dashboard",
     },
     {
-<<<<<<< HEAD
-      to: "/Exchange",
-      name: "Trading",
-    },
-    {
-      to: "/Wallett",
-      name: "Market",
-    },
-    {
-      to: "/Market",
-      name: "Contact",
-=======
       to: "/trade",
       name: "Trade",
     },
     {
       to: "/market",
       name: "Market",
->>>>>>> 5dd878315c77a6dd151a04d0f0daa6d4183fed3f
     },
     {
       to: "/contact",
@@ -63,20 +54,28 @@ const Header = () => {
           </ul>
         </div>
         <div className="right-navbar">
-          <NavLink to="/Main">
-            <input
-              className="search-input"
-              type="search"
-              placeholder="Search Here"
-            />
+          <NavLink>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <input
+                className="search-input"
+                type="text"
+                name="text"
+                onChange={handleSearch}
+                placeholder="Search Here"
+              />
+            </form>
           </NavLink>
+
           {isloggedin ? (
             <>
               <button className="login-btn" onClick={handleLogout}>
                 LOGOUT
               </button>
               <div>
-                <p className="user-text">{userName.name.toUpperCase()}</p>
+                <p className="user-text">
+                  <UserOutlined className="user-icon" />
+                  {userName.name.toUpperCase()}
+                </p>
               </div>
             </>
           ) : (

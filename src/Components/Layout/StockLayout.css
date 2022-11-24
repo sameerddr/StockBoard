@@ -1,21 +1,21 @@
 .layoutHeader {
-    background-color: #1F2937;
-    height: 12vh;
+  background-color: #1f2937;
+  height: 12vh;
 }
 
 .site-layout-content {
-    height: auto;
-    padding: 24px;
-    background-color: #111827;
+  height: auto;
+  padding: 24px;
+  background-color: #111827;
 }
 
 .slider {
-    min-width: 400px;
-    background-color:#111827;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
+  min-width: 400px;
+  background-color: #111827;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }

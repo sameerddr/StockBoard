@@ -3,10 +3,6 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body {
-  background: rgb(4, 6, 39);
-}
-
 .formContainer {
   background: white;
   width: 300px;

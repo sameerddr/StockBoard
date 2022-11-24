@@ -14,6 +14,13 @@ function MainStateProvider({ children }) {
   });
   const [isloggedin, setIsLoggedin] = useState(false);
 
+  const [url, setUrl] = useState(
+    "https://api.coingecko.com/api/v3/exchange_rates"
+  );
+  const [rateData, setRateData] = useState([]);
+  const [search, setSearch] = useState("");
+  const [searchdata, setSearchData] = useState(null);
+
   return (
     <MainContext.Provider
       value={{
@@ -23,6 +30,14 @@ function MainStateProvider({ children }) {
         setInputt,
         isloggedin,
         setIsLoggedin,
+        url,
+        setUrl,
+        rateData,
+        setRateData,
+        search,
+        setSearch,
+        searchdata,
+        setSearchData,
       }}
     >
       {children}

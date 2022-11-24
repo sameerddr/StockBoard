@@ -36,73 +36,79 @@ const Login = () => {
   };
 
   return (
-    <div div className="body-login">
-      <div className="form-main">
-        <div className="formContainer">
-          <NavLink to="/">
-            <CloseOutlined className="close" />
-          </NavLink>
-          <form onSubmit={handleLogin}>
-            <div className="main-login-div">
-              <h2 className="log-text"> LOGIN</h2>
-              <div className="content-div">
-                <label htmlFor="userEmail" className="useremail">
-                  Email
-                </label>
-                <br />
-                <input
-                  className="email-input"
-                  type="text"
-                  id="userEmail"
-                  placeholder="Enter Email"
-                  name="email"
-                  value={input.email}
-                  onChange={handaleInput}
-                />
-              </div>
-
-              <div className="password-div">
-                <label htmlFor="pswd">Password</label>
-                <br />
-                <input
-                  className="password-input"
-                  type="password"
-                  id="pswd"
-                  placeholder="Enter password"
-                  name="password"
-                  value={input.password}
-                  onChange={handaleInput}
-                />
-              </div>
-
-              <div className="btn_div">
-                <button type="submit" className="submit_btn" onClick={() => {}}>
-                  LOGIN
-                </button>
-                <div className="social-media">
-                  <p className="or">------- OR -------</p>
+    <>
+      <div div className="body-login">
+        <div className="form-main">
+          <div className="formContainer">
+            <NavLink to="/">
+              <CloseOutlined className="close" />
+            </NavLink>
+            <form onSubmit={handleLogin}>
+              <div className="main-login-div">
+                <h2 className="log-text"> LOGIN</h2>
+                <div className="content-div">
+                  <label htmlFor="userEmail" className="useremail">
+                    Email
+                  </label>
+                  <br />
+                  <input
+                    className="email-input"
+                    type="text"
+                    id="userEmail"
+                    placeholder="Enter Email"
+                    name="email"
+                    value={input.email}
+                    onChange={handaleInput}
+                  />
                 </div>
 
-                <div className="social-icon">
-                  <FacebookOutlined className="icon" />
-                  <InstagramOutlined className="icon" />
-                  <GithubOutlined className="icon" />
+                <div className="password-div">
+                  <label htmlFor="pswd">Password</label>
+                  <br />
+                  <input
+                    className="password-input"
+                    type="password"
+                    id="pswd"
+                    placeholder="Enter password"
+                    name="password"
+                    value={input.password}
+                    onChange={handaleInput}
+                  />
                 </div>
 
-                <p className="need-account">
-                  Don't have Accout?
-                  <Link to="/register">
-                    <span className="register">
-                      <u> SIGN UP</u>
-                    </span>
-                  </Link>
-                </p>
+                <div className="btn_div">
+                  <button
+                    type="submit"
+                    className="submit_btn"
+                    onClick={() => {}}
+                  >
+                    LOGIN
+                  </button>
+                  <div className="social-media">
+                    <p className="or">------- OR -------</p>
+                  </div>
+
+                  <div className="social-icon">
+                    <FacebookOutlined className="icon" />
+                    <InstagramOutlined className="icon" />
+                    <GithubOutlined className="icon" />
+                  </div>
+
+                  <p className="need-account">
+                    Don't have Accout?
+                    <Link to="/register">
+                      <span className="register">
+                        <u> SIGN UP</u>
+                      </span>
+                    </Link>
+                  </p>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
