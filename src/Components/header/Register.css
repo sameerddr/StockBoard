@@ -1,0 +1,30 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  color: rgb(15, 15, 129);
+}
+.main-ragister-div {
+  width: 260px;
+  height: 300px;
+}
+.name-input {
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 7px 12px 7px;
+  transition: 0.4s;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.already-login {
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+}
+.log-text {
+  margin-bottom: 15px;
+}
