@@ -1,15 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 
-import Header from "./components/header/Header";
-import Wallett from "./components/header/Wallett";
-import Login from "./components/header/Login";
-import Register from "./components/header/Register";
-import WelcomePage from "./components/header/WelcomePage";
-// import Main from "./components/header/Main";
-import StockLayout from "./components/Layout/StockLayout";
-import ContactUs from "./components/ContactUs/ContactUs";
-import { Trade } from "./components/trade/Trade";
-// import Graph1 from "./components/Graphs/Graph1";
+import Header from "./Components/header/Header";
+import Wallett from "./Components/header/Wallett";
+import Login from "./Components/header/Login";
+import Register from "./Components/header/Register";
+import WelcomePage from "./Components/header/WelcomePage";
+// import Main from "./Components/header/Main";
+import StockLayout from "./Components/Layout/StockLayout";
+import ContactUs from "./Components/ContactUs/ContactUs";
+import { Trade } from "./Components/trade/Trade";
+// import Graph1 from "./Components/Graphs/Graph1";
 
 import "antd/dist/antd.css";
 import "./App.css";
