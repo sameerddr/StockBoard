@@ -1,14 +1,14 @@
-Table{
-    background-color: #111827;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700;
-    width: 700px;
+Table {
+  background-color: #111827;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  width: 700px;
 }
-Table:hover{
-    background-color: #1F2937;
-    color: black;
+Table:hover {
+  background-color: #1f2937;
+  color: black;
 }
-.rate_table .ant-table-thead > tr > th{
-    background-color: rgb(61, 151, 254);
+.rate_table .ant-table-thead > tr > th {
+  background-color: rgb(61, 151, 254);
 }

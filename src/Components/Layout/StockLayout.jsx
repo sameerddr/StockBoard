@@ -1,6 +1,6 @@
 import { Layout } from "antd";
 
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
 import Cards from "../Cards/Cards";
 import Graph4 from "../Graphs/Graph4";
 import Graph2 from "../Graphs/Graph2";
@@ -8,11 +8,15 @@ import Graph3 from "../Graphs/Graph3";
 import Graph5 from "../Graphs/Graph5";
 import { TableComponent } from "../table/TableComponent";
 import Dashboard from "../Dashboard/Dashboard";
-import { Trade } from "../trade/Trade";
+// import { Trade } from "../trade/Trade";
 
 import "../Layout/StockLayout.css";
 
-const { Header, Footer, Sider, Content } = Layout;
+const {
+  //  Header, Footer,
+  Sider,
+  Content,
+} = Layout;
 function StockLayout() {
   const TRTimg =
     "https://seeklogo.com/images/T/TRT-logo-16A21F34B7-seeklogo.com.png";

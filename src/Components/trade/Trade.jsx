@@ -4,7 +4,7 @@ import "./Trade.css";
 
 export function Trade() {
   return (
-    <>
+    <div className="bodytrade">
       <header>
         <div className="header_div">
           <div className="banking_login_div">
@@ -414,37 +414,93 @@ export function Trade() {
             </p>
             <p>
               <strong>
-              Consolidation is not right for everyone, so you should carefully consider your options. Before deciding whether to retain assets in a retirement plan account through a former employer, roll them over to a qualified retirement plan account through a new employer (if one is available and rollovers are permitted), or roll them over to an IRA, an investor should consider all his or her options and the various factors including, but not limited to, the differences in investment options, fees and expenses, services, the exceptions to the early withdrawal penalties, protection from creditors and legal judgments, required minimum distributions, the tax treatment of employer stock (if held in the qualified retirement plan account), and the availability of plan loans (i.e., loans are not permitted from IRAs, and the availability of loans from a qualified retirement plan will depend on the terms of the plan). For additional information, view the FINRA Website.
+                Consolidation is not right for everyone, so you should carefully
+                consider your options. Before deciding whether to retain assets
+                in a retirement plan account through a former employer, roll
+                them over to a qualified retirement plan account through a new
+                employer (if one is available and rollovers are permitted), or
+                roll them over to an IRA, an investor should consider all his or
+                her options and the various factors including, but not limited
+                to, the differences in investment options, fees and expenses,
+                services, the exceptions to the early withdrawal penalties,
+                protection from creditors and legal judgments, required minimum
+                distributions, the tax treatment of employer stock (if held in
+                the qualified retirement plan account), and the availability of
+                plan loans (i.e., loans are not permitted from IRAs, and the
+                availability of loans from a qualified retirement plan will
+                depend on the terms of the plan). For additional information,
+                view the FINRA Website.
               </strong>
-              </p>
-              <p>
-                <strong>
-                If you have multiple IRAs at E*TRADE or at other financial institutions, the annual contribution limit applies to contributions made to all of your IRAs (traditional and Roth IRAs) combined which can impact your ability to make a contribution to an IRA for the current tax year.  Before making a contribution, check your other IRAs and refer to the Contribution Limits Table for more details.
-                </strong>
-              </p>
-              <p>
-                <strong>
-                E*TRADE Securities LLC and its affiliates do not provide tax advice, and you should always consult your own tax advisor regarding your personal circumstances before taking any action that may have tax consequences.
-                </strong>
-              </p>
-              <p>
-              This offer neither is, nor should be construed as a recommendation or solicitation to buy, sell, or hold any security, financial product or instrument or to open a particular account or engage in any specific investment strategy.
-              </p>
-              <p>
-                2. In Benzinga’s 2021 Global Fintech Awards, E*TRADE was named Best Brokerage for Beginners and Best Options App. The Benzinga Fintech list is an index of carefully-vetted companies & executives that are actively working to create positive and diverse changes in the financial services space. Learn more
-              </p>
-              <p>
-                3. E*TRADE charges $0 commission for online US-listed stock, ETF, and options trades. Exclusions may apply and E*TRADE reserves the right to charge variable commission rates. The standard options contract fee is $0.65 per contract (or $0.50 per contract for customers who execute at least 30 stock, ETF, and options trades per quarter). The retail online $0 commission does not apply to Over-the-Counter (OTC), foreign stock transactions, large block transactions requiring special handling, transaction-fee mutual funds, futures, or fixed income investments. Service charges apply for trades placed through a broker ($25). Stock plan account transactions are subject to a separate commission schedule. Additional regulatory and exchange fees may apply. For more information about pricing, visit etrade.com/pricing.
-              </p>
-              <p>
-                4. The Annual Advisory Fee is 0.30%, or as low as $1.50 for $500 in assets, and is the direct fee charged to any client in the advisory program. The advisory fee does not cover underlying management fees and expenses of any mutual fund or ETF investment held in the portfolio. 
-              </p>
-              <p>
-              Securities products offered by E*TRADE Securities LLC (ETS), Member SIPC or Morgan Stanley Smith Barney LLC (MSSB), Member SIPC. Investment advisory services offered by E*TRADE Capital Management, LLC (ETCM) or MSSB. Commodity futures and options on futures products and services offered by E*TRADE Futures LLC, Member NFA. Stock plan administration solutions and services offered by E*TRADE Financial Corporate Services, Inc. Banking products and services are provided by Morgan Stanley Private Bank, National Association, Member FDIC. All entities are separate but affiliated subsidiaries of Morgan Stanley.
-              </p>
+            </p>
+            <p>
+              <strong>
+                If you have multiple IRAs at E*TRADE or at other financial
+                institutions, the annual contribution limit applies to
+                contributions made to all of your IRAs (traditional and Roth
+                IRAs) combined which can impact your ability to make a
+                contribution to an IRA for the current tax year. Before making a
+                contribution, check your other IRAs and refer to the
+                Contribution Limits Table for more details.
+              </strong>
+            </p>
+            <p>
+              <strong>
+                E*TRADE Securities LLC and its affiliates do not provide tax
+                advice, and you should always consult your own tax advisor
+                regarding your personal circumstances before taking any action
+                that may have tax consequences.
+              </strong>
+            </p>
+            <p>
+              This offer neither is, nor should be construed as a recommendation
+              or solicitation to buy, sell, or hold any security, financial
+              product or instrument or to open a particular account or engage in
+              any specific investment strategy.
+            </p>
+            <p>
+              2. In Benzinga’s 2021 Global Fintech Awards, E*TRADE was named
+              Best Brokerage for Beginners and Best Options App. The Benzinga
+              Fintech list is an index of carefully-vetted companies &
+              executives that are actively working to create positive and
+              diverse changes in the financial services space. Learn more
+            </p>
+            <p>
+              3. E*TRADE charges $0 commission for online US-listed stock, ETF,
+              and options trades. Exclusions may apply and E*TRADE reserves the
+              right to charge variable commission rates. The standard options
+              contract fee is $0.65 per contract (or $0.50 per contract for
+              customers who execute at least 30 stock, ETF, and options trades
+              per quarter). The retail online $0 commission does not apply to
+              Over-the-Counter (OTC), foreign stock transactions, large block
+              transactions requiring special handling, transaction-fee mutual
+              funds, futures, or fixed income investments. Service charges apply
+              for trades placed through a broker ($25). Stock plan account
+              transactions are subject to a separate commission schedule.
+              Additional regulatory and exchange fees may apply. For more
+              information about pricing, visit etrade.com/pricing.
+            </p>
+            <p>
+              4. The Annual Advisory Fee is 0.30%, or as low as $1.50 for $500
+              in assets, and is the direct fee charged to any client in the
+              advisory program. The advisory fee does not cover underlying
+              management fees and expenses of any mutual fund or ETF investment
+              held in the portfolio.
+            </p>
+            <p>
+              Securities products offered by E*TRADE Securities LLC (ETS),
+              Member SIPC or Morgan Stanley Smith Barney LLC (MSSB), Member
+              SIPC. Investment advisory services offered by E*TRADE Capital
+              Management, LLC (ETCM) or MSSB. Commodity futures and options on
+              futures products and services offered by E*TRADE Futures LLC,
+              Member NFA. Stock plan administration solutions and services
+              offered by E*TRADE Financial Corporate Services, Inc. Banking
+              products and services are provided by Morgan Stanley Private Bank,
+              National Association, Member FDIC. All entities are separate but
+              affiliated subsidiaries of Morgan Stanley.
+            </p>
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
