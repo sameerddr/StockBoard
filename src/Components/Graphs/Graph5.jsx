@@ -9,10 +9,12 @@ import "./Graph5.css";
 
 const DemoArea = () => {
   const [data, setdata] = useState([]);
-  const [loader, setloader] = useState(false);
+  const [loader, setloader] = useState(true);
   const GetApi = async () => {
     let api =
       "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=TSCO.LON&apikey==W9IPCZT6X76UJZOY";
+
+    setloader(true);
 
     try {
       const response = await axios.get(api);
@@ -20,7 +22,7 @@ const DemoArea = () => {
       let a = [];
       let data = response.data["Weekly Adjusted Time Series"];
       while (i < Object.keys(data).length) {
-        if (i % 200 == 0) {
+        if (i % 400 == 0) {
           a.push({
             value: data[Object.keys(data)[i]]["3. low"],
             type: "low",
@@ -35,11 +37,10 @@ const DemoArea = () => {
         i++;
       }
       setdata(a);
-      setloader(true);
     } catch (error) {
       console.log("Error" + error);
     } finally {
-      // setloader(false);
+      setloader(false);
     }
   };
 
@@ -64,13 +65,13 @@ const DemoArea = () => {
   return (
     <>
       {loader ? (
+        <Loader />
+      ) : (
         <>
           <div className="graph5">
             <Bar {...config} />
           </div>
         </>
-      ) : (
-        <Loader />
       )}
     </>
   );

@@ -7,19 +7,20 @@ import "./Graph3.css";
 
 const DemoArea = () => {
   const [data, setdata] = useState([]);
-  const [loader, setloader] = useState(false);
+  const [loader, setloader] = useState(true);
 
   const GetApi = async () => {
     let api =
       "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=RELIANCE.BSE&outputsize=full&apikey=W9IPCZT6X76UJZOY";
 
+    setloader(true);
     try {
       const response = await axios.get(api);
       let i = 0;
       let a = [];
       let data = response.data["Time Series (Daily)"];
       while (i < Object.keys(data).length) {
-        if (i % 400 == 0) {
+        if (i % 800 == 0) {
           a.push({
             value: data[Object.keys(data)[i]]["3. low"],
             type: "low",
@@ -34,11 +35,10 @@ const DemoArea = () => {
         i++;
       }
       setdata(a);
-      setloader(true);
     } catch (error) {
       console.log("Error" + error);
     } finally {
-      // setloader(false);
+      setloader(false);
     }
   };
 
@@ -64,13 +64,13 @@ const DemoArea = () => {
   return (
     <>
       {loader ? (
+        <Loader />
+      ) : (
         <>
           <div className="graph3">
             <Area {...config} />
           </div>
         </>
-      ) : (
-        <Loader />
       )}
     </>
   );

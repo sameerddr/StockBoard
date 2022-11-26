@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Table } from "antd";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
-import  column  from './TableComponentStaticDatas';
+import column from "./TableComponentStaticDatas";
 
-import 'react-toastify/dist/ReactToastify.css';
-import './Table.css';
+import "react-toastify/dist/ReactToastify.css";
+import "./Table.css";
 
 export function TableComponent() {
   const [url, setUrl] = useState(
@@ -15,35 +15,30 @@ export function TableComponent() {
   const [rateData, setRateData] = useState([]);
 
   const flattenObj = (ob) => {
-    let arr=[]
+    let arr = [];
     for (const i in ob) {
-      arr.push(ob[i])
+      arr.push(ob[i]);
     }
-    setRateData(arr)
+    setRateData(arr);
   };
 
-
-  
   useEffect(() => {
     axios
       .get(url)
       .then((response) => {
-        flattenObj(response.data.rates)
+        flattenObj(response.data.rates);
       })
       .catch((err) => {
-        toast.error(err)
+        toast.error(err);
       });
   }, []);
-
-
 
   return (
     <>
       <Table
-      className="rate_table"
+        className="rate_table"
         dataSource={rateData}
-        columns={column}
-      ></Table>
+        columns={column}></Table>
       <ToastContainer />
     </>
   );
