@@ -7,6 +7,7 @@ import Graph2 from "../Graphs/Graph2";
 import Graph3 from "../Graphs/Graph3";
 import Graph5 from "../Graphs/Graph5";
 import { TableComponent } from "../table/TableComponent";
+import { Market } from "../market/Market";
 import Dashboard from "../Dashboard/Dashboard";
 // import { Trade } from "../trade/Trade";
 
