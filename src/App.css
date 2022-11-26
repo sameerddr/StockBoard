@@ -1,3 +1,6 @@
 body {
   background-color: rgb(4, 6, 39);
 }
+*{
+  font-weight: lighter;
+}
